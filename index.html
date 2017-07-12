@@ -12,16 +12,80 @@
 	<header>
 		<h1>Slider en JavaScript</h1>
 	</header>
-	<main>
-		<img class="slidePicture" src="img/FMB01.png" alt="Full metal alchemist Brotherhood">
-		<img class="slidePicture" src="img/FMB02.jpg" alt="Full metal alchemist Brotherhood">
-		<img class="slidePicture" src="img/FMB03.jpg" alt="Full metal alchemist Brotherhood">
-		<img class="slidePicture" src="img/FMB04.jpg" alt="Full metal alchemist Brotherhood">
-		<img class="slidePicture" src="img/FMB05.jpg" alt="Full metal alchemist Brotherhood">
-	</main>
-	<script src="js/main.js"></script>
-	<script>
 
+	<main class="container-fluid">
+
+		<figure class="slidePicture">
+			<img src="img/FMB01.png" alt="Full metal alchemist Brotherhood">
+			<figcaption>photo 01</figcaption>
+		</figure>
+
+		<figure class="slidePicture">
+			<img src="img/FMB02.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>photo 02</figcaption>
+		</figure>
+
+		<figure class="slidePicture">
+			<img src="img/FMB03.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>photo 03</figcaption>
+		</figure>
+
+		<figure class="slidePicture">
+			<img src="img/FMB04.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>photo 04</figcaption>
+		</figure>
+
+		<figure class="slidePicture">
+			<img src="img/FMB05.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>photo 05</figcaption>
+		</figure>
+
+		<button class="" onclick="previous()">Précédent</button>
+
+		<button class="" onclick="next()">Suivant</button>
+
+	</main>
+
+	<script>
+		//Déclaration de variable.
+		var sliderIndex = 0;
+		var slidePicture = document.getElementsByClassName('slidePicture');
+
+		var i;
+
+
+		//fonction.
+		function hiddenImage() {
+			slidePicture[i].style.display = "none ";
+		}
+
+		function slider() {
+			for (i = 0; i < slidePicture.length; i++) {
+				hiddenImage();
+			}
+
+			sliderIndex++;
+
+			if (sliderIndex > slidePicture.length) {
+				sliderIndex = 1
+			}
+			slidePicture[sliderIndex - 1].style.display = 'block';
+			setTimeout(slider, 1500);
+		}
+
+		function previous() {
+
+
+		}
+
+		function next() {
+
+
+		}
+
+
+
+		slider();
 
 	</script>
 </body>

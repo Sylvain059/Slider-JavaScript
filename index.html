@@ -5,10 +5,17 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Slider JS</title>
+
+	<!--  FAVICON LINK  -->
 	<link rel="icon" type="image/png" href="favicon.png">
+
+	<!--  FONT LINK  -->
 	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+
+	<!--  CSS LINK  -->
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -43,9 +50,6 @@
 			<figcaption>Photo 05</figcaption>
 		</figure>
 
-		<button class="" onclick="previous()">Précédent</button>
-
-		<button class="" onclick="next()">Suivant</button>
 
 	</main>
 
@@ -58,7 +62,7 @@
 
 		//fonction.
 		function hiddenImage() {
-			slidePicture[i].style.display = "none ";
+			slidePicture[i].style.display = "none "; //Rend les images invisibles.
 		}
 
 		function slider() {
@@ -74,11 +78,6 @@
 			slidePicture[sliderIndex - 1].style.display = 'block';
 			setTimeout(slider, 3000);
 		}
-
-		function previous() {}
-
-		function next() {}
-
 
 
 		slider();

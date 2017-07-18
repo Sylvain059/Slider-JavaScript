@@ -5,39 +5,42 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Slider JS</title>
+	<link rel="icon" type="image/png" href="favicon.png">
+	<link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-	<header>
+	<header class="jumbotron">
 		<h1>Slider en JavaScript</h1>
 	</header>
 
-	<main class="container-fluid">
+	<main class="container">
 
 		<figure class="slidePicture">
-			<img src="img/FMB01.png" alt="Full metal alchemist Brotherhood">
-			<figcaption>photo 01</figcaption>
+			<img class="img-fluid" src="img/FMB01.png" alt="Full metal alchemist Brotherhood">
+			<figcaption>Photo 01</figcaption>
 		</figure>
 
 		<figure class="slidePicture">
-			<img src="img/FMB02.jpg" alt="Full metal alchemist Brotherhood">
-			<figcaption>photo 02</figcaption>
+			<img class="img-fluid" src="img/FMB02.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>Photo 02</figcaption>
 		</figure>
 
 		<figure class="slidePicture">
-			<img src="img/FMB03.jpg" alt="Full metal alchemist Brotherhood">
-			<figcaption>photo 03</figcaption>
+			<img class="img-fluid" src="img/FMB03.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>Photo 03</figcaption>
 		</figure>
 
 		<figure class="slidePicture">
-			<img src="img/FMB04.jpg" alt="Full metal alchemist Brotherhood">
-			<figcaption>photo 04</figcaption>
+			<img class="img-fluid" src="img/FMB04.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>Photo 04</figcaption>
 		</figure>
 
 		<figure class="slidePicture">
-			<img src="img/FMB05.jpg" alt="Full metal alchemist Brotherhood">
-			<figcaption>photo 05</figcaption>
+			<img class="img-fluid" src="img/FMB05.jpg" alt="Full metal alchemist Brotherhood">
+			<figcaption>Photo 05</figcaption>
 		</figure>
 
 		<button class="" onclick="previous()">Précédent</button>
@@ -50,7 +53,6 @@
 		//Déclaration de variable.
 		var sliderIndex = 0;
 		var slidePicture = document.getElementsByClassName('slidePicture');
-
 		var i;
 
 
@@ -70,18 +72,12 @@
 				sliderIndex = 1
 			}
 			slidePicture[sliderIndex - 1].style.display = 'block';
-			setTimeout(slider, 1500);
+			setTimeout(slider, 3000);
 		}
 
-		function previous() {
+		function previous() {}
 
-
-		}
-
-		function next() {
-
-
-		}
+		function next() {}
 
 
 
